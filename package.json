@@ -1,0 +1,25 @@
+{
+  "name": "inspire-book",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevelopersTMW/Inspire-Book.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevelopersTMW/Inspire-Book/issues"
+  },
+  "homepage": "https://github.com/DevelopersTMW/Inspire-Book#readme",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^4.0.3"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.3"
+  }
+}
