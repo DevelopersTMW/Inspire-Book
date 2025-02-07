@@ -1,3 +1,5 @@
+
+
 window.onload = function() {
     // Get the current page URL or pathname
     const currentPage = window.location.pathname.split("/").pop();
@@ -46,59 +48,52 @@ faqItems.forEach(item => {
 
 
 // SLICK SLIDER 
-$('.responsive').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true
+function Slidersss(){
+    $('.responsive').slick({
+        dots: true,
+        infinite: false,
+        arrows: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
-    ]
-});
-$('.multiple-items').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3
-});
-
-
-// HEADER AND FOOTER ON WHOLE WEBSITE 
-function loadComponent(file, elementId) {
-    fetch(file)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById(elementId).innerHTML = data;
-        })
-        .catch(error => console.error('Error loading component:', error));
+        ]
+    });
+    $('.multiple-items').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
 }
+Slidersss()
 
-document.addEventListener("DOMContentLoaded", function() {
-    loadComponent('header.html', 'header-container');
-    loadComponent('footer.html', 'footer-container');
-});
 
 // TABS 
 const b1 = document.querySelector('#b111')
@@ -124,13 +119,15 @@ function openTab(tabName) {
   }
   
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll("ul a");
-    const currentPage = window.location.pathname.split("/").pop(); // Get the current page file name
+//   document.addEventListener("DOMContentLoaded", function () {
+//     const navLinks = document.querySelectorAll("ul a");
+//     const currentPage = window.location.pathname.split("/").pop(); // Get the current page file name
 
-    navLinks.forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-            link.classList.add("border-b-[4px]", "border-[#ED6629]"); // Add underline style
-        }
-    });
-});
+//     navLinks.forEach(link => {
+//         if (link.getAttribute("href") === currentPage) {
+//             link.classList.add("border-b-[4px]", "border-[#ED6629]"); // Add underline style
+//         }
+//     });
+// });
+
+

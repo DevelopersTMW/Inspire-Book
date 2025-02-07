@@ -7,12 +7,46 @@ p{
 li{
   font-family:  "Urbanist" ;
 }
+#HoverButton {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#HoverButton::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #9c3f00 ;
+  transition: 0.8s;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+  color: white;
+}
+
+#HoverButton:hover::before  {
+  height: 180%;
+}
 
 #HeaderBgImage{
     background-position: center;
     background-size: cover;
     background-position-x: 67%;
     background-image: url('../assets/HeroSectionBanner.jpg');
+}
+#HeaderBgImage2{
+  background-position: center;
+  background-size: cover;
+  background-position-x: 67%;
+  background-image: url('../assets/HeroSectionBanner2.jpg');
+}
+#HeaderBgImage3{
+  background-position: center;
+  background-size: cover;
+  background-position-x: 67%;
+  background-image: url('../assets/HeroSectionBanner3.jpg');
 }
 #ServiceBgImage{
     background-position: center;
@@ -81,6 +115,11 @@ button.slick-next.slick-arrow {
 img.w-\[150px\].rounded-full.h-\[250px\] {
 	width: 150px !important;
 }
+
+#PublishServiceImage{
+  border-radius: 50%;
+  height: 80px ;
+}
 /* FAQ */
 
 .faq-container {
@@ -101,7 +140,7 @@ img.w-\[150px\].rounded-full.h-\[250px\] {
   }
 
   .faq-question {
-	padding: 20px;
+	padding: 18px;
 	font-size: 16px;
 	font-weight: 500;
 	display: flex;
